@@ -1,43 +1,24 @@
 const listaUsuario = []
-
-let usuario = {
-    nombre : "Solid",
-    apellido : "Snake",
-    edad : 42,
-    email : "metalgear@gmail.com",
-    clave : "lalilulelo"
+class Usuario {
+    constructor (nombre, apellido, edad, email, clave){
+        this.nombre = nombre
+        this.apellido = apellido
+        this.edad = edad
+        this.email = email
+        this.clave = clave
+    }
 }
 
+let usuario = new Usuario("Solid", "Snake", 42, "metalgear@gmail.com", "lalilulelo")
 listaUsuario.push(usuario)
 
-usuario = {
-    nombre : "Sam",
-    apellido : "Porter",
-    edad : 40,
-    email : "deathstranding@gmail.com",
-    clave : "Luden"
-}
-
+usuario = new Usuario("Sam", "Porter", 40, "deathstranding@gmail.com", "Luden")
 listaUsuario.push(usuario)
 
-usuario = {
-    nombre : "Dante",
-    apellido : "Sparda",
-    edad : 45,
-    email : "dmc@gmail.com",
-    clave : "Nero"
-}
-
+usuario = new Usuario("Dante", "Sparda", 45, "dmc@gmail.com", "Nero")
 listaUsuario.push(usuario)
 
-usuario = {
-    nombre : "Sebastian",
-    apellido : "Castellanos",
-    edad : 38,
-    email : "theevilwithin@gmail.com",
-    clave : "Lily"
-}
-
+usuario = new Usuario("Sebastian", "Castellanos", 38, "theevilwithin@gmail.com", "Lily")
 listaUsuario.push(usuario)
 
 do {
@@ -130,14 +111,9 @@ function registro() {
         }
     } while (continuar);
     
-    usuario = {
-        nombre : nombre,
-        apellido : apellido,
-        edad : edad,
-        email : correo,
-        clave : clave
-    }
+    usuario = new Usuario (nombre, apellido, edad, correo, clave)
     listaUsuario.push(usuario)
 
-}
+    alert("Usuario creado correctamente.")
 
+}
